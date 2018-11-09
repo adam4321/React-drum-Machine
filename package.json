@@ -1,5 +1,6 @@
 {
   "name": "react-drum-machine",
+  "homepage": "https://adamjwright.com/drum_machine/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
