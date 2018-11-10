@@ -1,8 +1,7 @@
 
 //ts-check
 
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import snare from './snare.mp3'
 import bass from './bass-drum.mp3'
