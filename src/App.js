@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 //ts-check
 
@@ -13,17 +12,11 @@ import tom3 from './low-tom.mp3'
 import closed from './closed.wav'
 import clap from './clap.mp3'
 import ride from './ride.mp3'
-=======
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
->>>>>>> upstream/master
 
 
 // Create an object that defines each button's information
 
 const data = [
-<<<<<<< HEAD
   { id: 'Snare', letter: 'Q', src: snare },
   { id: 'Bass Drum', letter: 'W', src: bass },
   { id: 'Cymbal', letter: 'E', src: cymbal },
@@ -33,17 +26,6 @@ const data = [
   { id: 'High hat', letter: 'Z', src: closed },
   { id: 'Clap', letter: 'X', src: clap },
   { id: 'Ride', letter: 'C', src: ride },
-=======
-  { id: 'Snare', letter: 'Q', src: 'https://www.myinstants.com/media/sounds/snare.mp3' },
-  { id: 'Bass 1', letter: 'W', src: 'https://www.myinstants.com/media/sounds/bass-drum.mp3' },
-  { id: 'Cymbal', letter: 'E', src: "https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DR-110/95[kb]DR110OHT.wav.mp3" },
-  { id: 'Tom Hi', letter: 'A', src: "https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/kawai%20R50%20drumkit/16[kb]ETOM_H.aif.mp3" },
-  { id: 'Tom Mid', letter: 'S', src: "https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/kawai%20R50%20drumkit/18[kb]ETOM_M.aif.mp3" },
-  { id: 'Tom Low', letter: 'D', src: "https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/kawai%20R50%20drumkit/27[kb]ETOM_L.aif.mp3" },
-  { id: 'High hat', letter: 'Z', src: 'http://www.denhaku.com/r_box/tr707/closed.wav' },
-  { id: 'Clap', letter: 'X', src: "https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DR-110/57[kb]DR110CLP.wav.mp3" },
-  { id: 'Ride', letter: 'C', src: "https://sampleswap.org/samples-ghost/DRUMS%20(FULL%20KITS)/DR-110/116[kb]DR110CYM.wav.mp3"  },
->>>>>>> upstream/master
 ]
 
 // Create the drum machine component
@@ -117,11 +99,7 @@ class DrumPad extends React.Component {
         id={this.props.id}
         onClick={this.handleClick}
         >
-<<<<<<< HEAD
         <h3 id='button-letter'>{this.props.letter}</h3>
-=======
-        <h2>{this.props.letter}</h2>
->>>>>>> upstream/master
         <audio
           ref={ref => this.audio = ref}
           className='clip'
