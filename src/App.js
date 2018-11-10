@@ -19,7 +19,7 @@ import ride from './ride.mp3'
 
 const data = [
   { id: 'Snare', letter: 'Q', src: snare },
-  { id: 'Bass 1', letter: 'W', src: bass },
+  { id: 'Bass Drum', letter: 'W', src: bass },
   { id: 'Cymbal', letter: 'E', src: cymbal },
   { id: 'Tom Hi', letter: 'A', src: tom1 },
   { id: 'Tom Mid', letter: 'S', src: tom2 },
@@ -100,7 +100,7 @@ class DrumPad extends React.Component {
         id={this.props.id}
         onClick={this.handleClick}
         >
-        <h2>{this.props.letter}</h2>
+        <h3 id='button-letter'>{this.props.letter}</h3>
         <audio
           ref={ref => this.audio = ref}
           className='clip'

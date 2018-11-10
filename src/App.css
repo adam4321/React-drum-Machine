@@ -1,74 +1,55 @@
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
+/* The Page */
 
 body{
   background-color:#445463;
   font-family:'Orbitron', sans-serif;
 }
+
+/* The Machine Body*/
+
 #title{
   font-weight: 900;
   font-size:2.5vw;
   margin-top:vh;
 }
+
 #root{
   background-color:orange;
-/*   display: flex; */
+  position:relative;
   margin-left: auto;
   margin-right: auto;
   width:75vw;
   height:24vw;
   border-radius:25px;
-}
+  }
 
 #drum-machine{
   text-align:center;
 }
+
+/* The display and text */
+
 #display{
   grid-area:disp;
   border: solid 1vw black;
-  height:1.7vw;
-  width: 16%;
+  height:1.9vw;
+  width: 14vw;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.3vw;
   background-color:#282828;
   font-family: 'Orbitron', sans-serif;
   font-weight:bold;
+  font-size: 1.5vw;
   color:yellow;
   text-shadow:-2px 2px 25px;
   border:none;
+  position:relative;
 }
+
+/* The buttons and text */
+
 #drum-pads {
   height: 13vw;
   width: 90%;
@@ -80,11 +61,16 @@ body{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: .5vw;
-  grid-auto-rows: minmax(30px, auto);
+  grid-auto-rows: minmax(2.2vw, auto);
+  }
+
+#button-letter{
+  font-size:1.3vw;
 }
+
 .drum-pad{
-  width:100%;
-  height:100%;
+  width:22vw;
+  height:3.7vw;
   transition:0.2s;
   box-shadow:-2px 0px 8px rgb(167, 17, 208); 
   border:none;
@@ -93,8 +79,13 @@ body{
   color:#FDFF38;
   font-weight:bold;
   text-shadow:-2px 2px 25px;
-}
+ }
+
+ /* My name */
+
 #attribution{
   font-size:1vw;
   margin-top:1.3vw;
-}
+  position:absolute;
+  left:33vw;
+  }
