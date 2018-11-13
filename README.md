@@ -1,3 +1,10 @@
+React Drum Machine
+
+![Logo](https://i.imgur.com/OMTqyYd.png)
+
+This is a drum machine built using React
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
