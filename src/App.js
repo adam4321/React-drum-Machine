@@ -3,15 +3,15 @@
 
 import React from 'react';
 import './App.css';
-import snare from './snare.mp3'
-import bass from './bass-drum.mp3'
-import cymbal from './cymbal.wav'
-import tom1 from './hi-tom.mp3'
-import tom2 from './mid-tom.mp3'
-import tom3 from './low-tom.mp3'
-import closed from './closed.wav'
-import clap from './clap.mp3'
-import ride from './ride.mp3'
+import snare from './snare-sample.wav'
+import bass from './kick-sample.wav'
+import cymbal from './crash-sample.wav'
+import tom1 from './hi-tom-sample.wav'
+import tom2 from './mid-tom-sample.wav'
+import tom3 from './low-tom-sample.wav'
+import closed from './hh-sample.wav'
+import clap from './china-sample.wav'
+import ride from './ride-sample.wav'
 
 
 // Create an object that defines each button's information
@@ -24,7 +24,7 @@ const data = [
   { id: 'Tom Mid', letter: 'S', src: tom2 },
   { id: 'Tom Low', letter: 'D', src: tom3 },
   { id: 'High hat', letter: 'Z', src: closed },
-  { id: 'Clap', letter: 'X', src: clap },
+  { id: 'China', letter: 'X', src: clap },
   { id: 'Ride', letter: 'C', src: ride },
 ]
 
