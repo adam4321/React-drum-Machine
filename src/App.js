@@ -43,7 +43,8 @@ class App extends React.Component {
   handleDisplay = display => this.setState({ display })
   
   render() {
-    return <div id='drum-machine'>
+    return <div>
+    <div id='drum-machine'>
       <h1 id='title'>React Drum Machine</h1>
       <div id='display'>{this.state.display}</div>
       <div id='drum-pads'>
@@ -57,6 +58,8 @@ class App extends React.Component {
       ))}
       </div> 
       <p id='attribution'>By Adam Wright</p>
+    </div>
+    <button id='back-button'><a href='https://adamjwright.com'>Back</a></button>
     </div>
   }
 }
@@ -106,9 +109,11 @@ class DrumPad extends React.Component {
           src={this.props.src}
           id={this.props.letter}>
         </audio>
-      </div>
+        </div>
     );
   }
 }
+
+
 
 export default App;

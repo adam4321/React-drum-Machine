@@ -14,19 +14,17 @@ body{
   margin-top:vh;
 }
 
-#root{
+#drum-machine{
   background-color:orange;
   position:relative;
   margin-left: auto;
   margin-right: auto;
+  text-align:center;
   width:75vw;
   height:24vw;
   border-radius:2vw;
   }
 
-#drum-machine{
-  text-align:center;
-}
 
 /* The display and text */
 
@@ -89,3 +87,21 @@ body{
   position:absolute;
   left:33vw;
   }
+ 
+#back-button {
+  width:8vw;
+  height:3vw;
+  background-color:rgb(223, 207, 207);
+  position:absolute;
+  left:46vw;
+  margin-top:4vw;
+  border-radius: 11px;
+  border:none;
+}
+a{
+  text-decoration: none;
+  text-align: center;
+  display:inline-block;
+  color:black;
+  font-size:1.1vw;
+}
