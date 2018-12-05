@@ -90,13 +90,15 @@ body{
  
 #back-button {
   width:8vw;
-  height:3vw;
+  height:2.1vw;
   background-color:rgb(223, 207, 207);
   position:absolute;
   left:46vw;
   margin-top:4vw;
   border-radius: 11px;
   border:none;
+  font-family:verdana;
+  padding-top: .78vw;
 }
 a{
   text-decoration: none;

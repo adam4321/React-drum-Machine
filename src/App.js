@@ -59,7 +59,7 @@ class App extends React.Component {
       </div> 
       <p id='attribution'>By Adam Wright</p>
     </div>
-    <button id='back-button'><a href='https://adamjwright.com'>Back</a></button>
+    <a id='back-button' href="https://adamjwright.com">Back</a>
     </div>
   }
 }
