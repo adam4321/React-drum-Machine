@@ -59,7 +59,7 @@ class App extends React.Component {
       </div> 
       <p id='attribution'>By Adam Wright</p>
     </div>
-    <a id='back-button' href="https://adamjwright.com">Back</a>
+    <a id='back-button' onClick={() => window.history.back()}>Back</a>
     </div>
   }
 }
