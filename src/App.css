@@ -19,6 +19,7 @@ body{
   position:relative;
   margin-left: auto;
   margin-right: auto;
+  margin-top:6vw;
   text-align:center;
   width:75vw;
   height:24vw;
@@ -129,4 +130,64 @@ body{
     width:210px;
     height:115px;
     margin-left:-40px;
+  }
+
+  @media only screen and (max-width:900px) {
+    #title{
+      font-weight: 900;
+      font-size:5vw;
+      padding-top:2vw;
+      /* margin-top:vh; */
+    }
+    #drum-machine{
+      position:relative;
+      margin-top:12vw;
+      width:75vw;
+      height:75vw;
+      }
+      #display{
+        height:6vw;
+        width: 34vw;
+        padding-top:1vw;
+        margin-bottom: 1.3vw;
+        font-size: 4vw;
+      }
+      #drum-pads {
+        height: 50vw;
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: .5vw;
+        grid-auto-rows: minmax(2.2vw, auto);
+        }
+      
+      #button-letter{
+        font-size:3vw;
+      }
+      
+      .drum-pad{
+        width:22vw;
+        height:10vw;
+        margin-top:2vw;
+        transition:0.2s;
+        box-shadow:-2px 0px 8px rgb(167, 17, 208); 
+        border:none;
+        border-radius:8px;
+        outline:none;
+        font-weight:bold;
+        text-shadow:-2px 2px 25px;
+       }
+       #attribution{
+        font-size:3vw;
+        margin-top:-.1vw;
+        left:23vw;
+        }
+    #back-button {
+      width:30vw;
+      height:8vw;
+      left:35vw;
+      margin-top:15vw;
+      border-radius: 11px;
+      font-size:5vw;
+      padding-top: 2vw;
+    }
   }
