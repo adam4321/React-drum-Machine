@@ -14,7 +14,7 @@ import clap from './china-sample.wav'
 import ride from './ride-sample.wav'
 
 
-// Create an object that defines each button's information
+//Object that defines each button's information
 
 const data = [
   { id: 'Snare', letter: 'Q', src: snare },
