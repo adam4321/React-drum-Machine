@@ -28,7 +28,7 @@ const data = [
   { id: 'Ride', letter: 'C', src: ride },
 ]
 
-// Create the drum machine component
+//Create the drum machine component
 
 class App extends React.Component {
   constructor(props){
@@ -38,7 +38,7 @@ class App extends React.Component {
     }
   }
   
-//   Display Handler
+//Display Handler
   
   handleDisplay = display => this.setState({ display })
   
@@ -58,17 +58,17 @@ class App extends React.Component {
       ))}
       </div> 
       <p id='attribution'>By Adam Wright</p>
-    </div>
+     </div>
     <a id='back-button' onClick={() => window.history.back()}>Back</a>
-    </div>
+   </div>
   }
 }
 
-// Create the button component
+//Create the button component
 
 class DrumPad extends React.Component {
   
-//   Functions to connect Keyboard to buttons
+//Functions to connect Keyboard to buttons
   
   componentDidMount() {
     document.addEventListener('keydown',this.handleKeyDown)
@@ -87,7 +87,7 @@ class DrumPad extends React.Component {
     }
   }
   
-//   Button's clickhandler function
+//Button's clickhandler function
   
   handleClick = () => {
     this.audio.play()
