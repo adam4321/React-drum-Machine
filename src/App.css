@@ -9,7 +9,6 @@ body{
 #title{
   font-weight: 900;
   font-size:2.5vw;
-  margin-top:vh;
 }
 
 #drum-machine{
@@ -27,7 +26,6 @@ body{
 /* The display and text */
 
 #display{
-  grid-area:disp;
   border: solid 1vw black;
   height:1.9vw;
   width: 14vw;
