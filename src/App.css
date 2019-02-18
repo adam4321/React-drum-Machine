@@ -126,6 +126,8 @@ a:hover {
   margin-left:-40px;
 }
 
+/* Media Query for less than 900 px screen width */
+
   @media only screen and (max-width:900px) {
 
     #title{
