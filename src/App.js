@@ -1,5 +1,5 @@
 
-//ts-check
+// @ts-check
 
 import React from 'react';
 import './App.css';
@@ -14,7 +14,7 @@ import clap from './china-sample.wav'
 import ride from './ride-sample.wav'
 
 
-//Object that defines each button's information
+// object that defines each button's information
 
 const data = [
   { id: 'Snare', letter: 'Q', src: snare },
@@ -28,7 +28,7 @@ const data = [
   { id: 'Ride', letter: 'C', src: ride },
 ]
 
-//Create the drum machine component
+// create the drum machine component
 
 class App extends React.Component {
   constructor(props){
@@ -38,7 +38,7 @@ class App extends React.Component {
     }
   }
   
-//Display Handler
+// display Handler
   
   handleDisplay = display => this.setState({ display })
   
@@ -64,11 +64,11 @@ class App extends React.Component {
   }
 }
 
-//Create the button component
+// create the button component
 
 class DrumPad extends React.Component {
   
-//Functions to connect Keyboard to buttons
+// functions to connect keyboard to buttons
   
   componentDidMount() {
     document.addEventListener('keydown',this.handleKeyDown)
@@ -87,7 +87,7 @@ class DrumPad extends React.Component {
     }
   }
   
-//Button's clickhandler function
+// button's clickhandler function
   
   handleClick = () => {
     this.audio.play()
