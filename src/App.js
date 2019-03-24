@@ -3,14 +3,23 @@
 
 import React from 'react';
 import './App.css';
+// @ts-ignore
 import snare from './snare-sample.wav'
+// @ts-ignore
 import bass from './kick-sample.wav'
+// @ts-ignore
 import cymbal from './crash-sample.wav'
+// @ts-ignore
 import tom1 from './hi-tom-sample.wav'
+// @ts-ignore
 import tom2 from './mid-tom-sample.wav'
+// @ts-ignore
 import tom3 from './low-tom-sample.wav'
+// @ts-ignore
 import closed from './hh-sample.wav'
+// @ts-ignore
 import clap from './china-sample.wav'
+// @ts-ignore
 import ride from './ride-sample.wav'
 
 
