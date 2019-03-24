@@ -4,7 +4,7 @@ body{
   font-family:'Orbitron', sans-serif;
 }
 
-/* The Machine Body*/
+/* machine body*/
 
 #title{
   font-weight: 900;
@@ -23,7 +23,7 @@ body{
   border-radius:2vw;
 }
 
-/* The display and text */
+/* machine display and text */
 
 #display{
   border: solid 1vw black;
@@ -42,7 +42,7 @@ body{
   position:relative;
 }
 
-/* The buttons and text */
+/* machine buttons and text */
 
 #drum-pads {
   height: 13vw;
@@ -75,7 +75,7 @@ body{
   text-shadow:-2px 2px 25px;
  }
 
- /* My name */
+ /* my name */
 
 #attribution{
   font-size:1vw;
@@ -126,7 +126,7 @@ a:hover {
   margin-left:-40px;
 }
 
-/* Media Query for less than 900 px screen width */
+/* media query for less than 900 px screen width */
 
   @media only screen and (max-width:900px) {
 
