@@ -1,17 +1,17 @@
 
-body{
+body {
   background-color:#445463;
   font-family:'Orbitron', sans-serif;
 }
 
 /* machine body*/
 
-#title{
+#title {
   font-weight: 900;
   font-size:2.5vw;
 }
 
-#drum-machine{
+#drum-machine {
   background-color:orange;
   position:relative;
   margin-left: auto;
@@ -25,7 +25,7 @@ body{
 
 /* machine display and text */
 
-#display{
+#display {
   border: solid 1vw black;
   height:1.9vw;
   width: 14vw;
@@ -58,11 +58,11 @@ body{
   grid-auto-rows: minmax(2.2vw, auto);
 }
 
-#button-letter{
+#button-letter {
   font-size:1.3vw;
 }
 
-.drum-pad{
+.drum-pad {
   width:22vw;
   height:3.7vw;
   transition:0.2s;
@@ -73,18 +73,18 @@ body{
   color:#FDFF38;
   font-weight:bold;
   text-shadow:-2px 2px 25px;
- }
+}
 
- /* my name */
+/* my name */
 
-#attribution{
+#attribution {
   font-size:1vw;
   margin-top:1.3vw;
   position:absolute;
   left:33vw;
 }
  
-#back-button{
+#back-button {
   width:8vw;
   height:2vw;
   background-color:#04536d;
@@ -97,7 +97,7 @@ body{
   box-shadow: 1px 3.5px 3px 0px rgb(27, 26, 26);
 }
 
-a{
+a {
   text-decoration: none;
   text-align: center;
   display:inline-block;
@@ -120,7 +120,7 @@ a:hover {
   transition: 0.4s;
 }
 
-.darken{
+.darken {
   width:210px;
   height:115px;
   margin-left:-40px;
@@ -128,67 +128,67 @@ a:hover {
 
 /* media query for less than 900 px screen width */
 
-  @media only screen and (max-width:900px) {
+@media only screen and (max-width:900px) {
 
-    #title{
-      font-weight: 900;
-      font-size:5vw;
-      padding-top:2vw;
-    }
-
-    #drum-machine{
-      position:relative;
-      margin-top:12vw;
-      width:75vw;
-      height:75vw;
-    }
-
-    #display{
-      height:6vw;
-      width: 34vw;
-      padding-top:1vw;
-      margin-bottom: 1.3vw;
-      font-size: 4vw;
-    }
-
-    #drum-pads {
-      height: 50vw;
-      width: 90%;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: .5vw;
-      grid-auto-rows: minmax(2.2vw, auto);
-    }
-      
-    #button-letter{
-      font-size:3vw;
-    }
-      
-    .drum-pad{
-      width:22vw;
-      height:10vw;
-      margin-top:2vw;
-      transition:0.2s;
-      box-shadow:-2px 0px 8px rgb(167, 17, 208); 
-      border:none;
-      border-radius:8px;
-      outline:none;
-      font-weight:bold;
-      text-shadow:-2px 2px 25px;
-    }
-
-    #attribution{
-      font-size:3vw;
-      margin-top:-.1vw;
-      left:23vw;
-    }
-        
-    #back-button {
-      width:30vw;
-      height:8vw;
-      left:35vw;
-      margin-top:15vw;
-      border-radius: 11px;
-      font-size:5vw;
-      padding-top: 2vw;
-    }
+  #title {
+    font-weight: 900;
+    font-size:5vw;
+    padding-top:2vw;
   }
+
+  #drum-machine {
+    position:relative;
+    margin-top:12vw;
+    width:75vw;
+    height:75vw;
+  }
+
+  #display {
+    height:6vw;
+    width: 34vw;
+    padding-top:1vw;
+    margin-bottom: 1.3vw;
+    font-size: 4vw;
+  }
+
+  #drum-pads {
+    height: 50vw;
+    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .5vw;
+    grid-auto-rows: minmax(2.2vw, auto);
+  }
+      
+  #button-letter {
+    font-size:3vw;
+  }
+      
+  .drum-pad {
+    width:22vw;
+    height:10vw;
+    margin-top:2vw;
+    transition:0.2s;
+    box-shadow:-2px 0px 8px rgb(167, 17, 208); 
+    border:none;
+    border-radius:8px;
+    outline:none;
+    font-weight:bold;
+    text-shadow:-2px 2px 25px;
+  }
+
+  #attribution {
+    font-size:3vw;
+    margin-top:-.1vw;
+    left:23vw;
+  }
+        
+  #back-button {
+    width:30vw;
+    height:8vw;
+    left:35vw;
+    margin-top:15vw;
+    border-radius: 11px;
+    font-size:5vw;
+    padding-top: 2vw;
+  }
+}
