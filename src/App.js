@@ -40,36 +40,37 @@ const data = [
 // create the drum machine component
 
 class App extends React.Component {
-  constructor(props){
+
+  constructor(props) {
     super(props);
     this.state = {
       display: 'Hit Me!'
     }
   }
   
-// display Handler
+  // display Handler
   
-  handleDisplay = display => this.setState({ display })
+  handleDisplay = display => this.setState( {display} )
   
   render() {
     return <div>
-    <div id='drum-machine'>
+      <div id='drum-machine'>
       <h1 id='title'>React Drum Machine</h1>
       <div id='display'>{this.state.display}</div>
       <div id='drum-pads'>
       {data.map(d => (
       <DrumPad 
         id={d.id}
-        letter={d.letter}
-        src={d.src}
-        handleDisplay={this.handleDisplay}
+        letter = {d.letter}
+        src = {d.src}
+        handleDisplay = {this.handleDisplay}
         />
       ))}
       </div> 
       <p id='attribution'>By Adam Wright</p>
-     </div>
-    <a id='back-button' onClick={() => window.history.back()}>Back</a>
-   </div>
+      </div>
+      <a id='back-button' onClick={() => window.history.back()}>Back</a>
+    </div>
   }
 }
 
@@ -77,26 +78,26 @@ class App extends React.Component {
 
 class DrumPad extends React.Component {
   
-// functions to connect keyboard to buttons
+  // functions to connect keyboard to buttons
   
   componentDidMount() {
     document.addEventListener('keydown',this.handleKeyDown)
     window.focus()
   }
   
-  componentWillUnmount(){
+  componentWillUnmount() {
     document.removeEventListener('keydown',this.handleKeyDown)
   }
   
   handleKeyDown = e => {
-    if(e.keyCode === this.props.letter.charCodeAt()){
+    if(e.keyCode === this.props.letter.charCodeAt()) {
       this.audio.play()
       this.audio.currentTime = 0
       this.props.handleDisplay(this.props.id)
     }
   }
   
-// button's clickhandler function
+  // button's clickhandler function
   
   handleClick = () => {
     this.audio.play()
@@ -104,25 +105,23 @@ class DrumPad extends React.Component {
     this.props.handleDisplay(this.props.id)
   }
   
-  render(){
-    return (
+  render() {
+    return(
       <div 
         className="drum-pad" 
-        id={this.props.id}
-        onClick={this.handleClick}
-        >
+        id = {this.props.id}
+        onClick = {this.handleClick}
+      >
         <h3 id='button-letter'>{this.props.letter}</h3>
         <audio
-          ref={ref => this.audio = ref}
-          className='clip'
-          src={this.props.src}
-          id={this.props.letter}>
+          ref = {ref => this.audio = ref}
+          className = 'clip'
+          src = {this.props.src}
+          id = {this.props.letter}>
         </audio>
-        </div>
+      </div>
     );
   }
 }
-
-
 
 export default App;
