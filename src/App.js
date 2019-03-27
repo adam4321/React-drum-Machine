@@ -4,23 +4,23 @@
 import React from 'react';
 import './App.css';
 // @ts-ignore
-import snare from './snare-sample.wav'
+import snare from './snare-sample.wav';
 // @ts-ignore
-import bass from './kick-sample.wav'
+import bass from './kick-sample.wav';
 // @ts-ignore
-import cymbal from './crash-sample.wav'
+import cymbal from './crash-sample.wav';
 // @ts-ignore
-import tom1 from './hi-tom-sample.wav'
+import tom1 from './hi-tom-sample.wav';
 // @ts-ignore
-import tom2 from './mid-tom-sample.wav'
+import tom2 from './mid-tom-sample.wav';
 // @ts-ignore
-import tom3 from './low-tom-sample.wav'
+import tom3 from './low-tom-sample.wav';
 // @ts-ignore
-import closed from './hh-sample.wav'
+import closed from './hh-sample.wav';
 // @ts-ignore
-import clap from './china-sample.wav'
+import clap from './china-sample.wav';
 // @ts-ignore
-import ride from './ride-sample.wav'
+import ride from './ride-sample.wav';
 
 
 // Object that defines each button's information
