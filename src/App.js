@@ -23,7 +23,7 @@ import clap from './china-sample.wav'
 import ride from './ride-sample.wav'
 
 
-// object that defines each button's information
+// Object that defines each button's information
 
 const data = [
   { id: 'Snare', letter: 'Q', src: snare },
@@ -37,7 +37,7 @@ const data = [
   { id: 'Ride', letter: 'C', src: ride },
 ]
 
-// create the drum machine component
+// Create the drum machine component
 
 class App extends React.Component {
 
@@ -48,37 +48,37 @@ class App extends React.Component {
     }
   }
   
-  // display Handler
+  // Display Handler
   
   handleDisplay = display => this.setState( {display} )
   
   render() {
     return <div>
-      <div id='drum-machine'>
-      <h1 id='title'>React Drum Machine</h1>
-      <div id='display'>{this.state.display}</div>
-      <div id='drum-pads'>
+      <div id = 'drum-machine'>
+      <h1 id = 'title'>React Drum Machine</h1>
+      <div id = 'display'>{this.state.display}</div>
+      <div id ='drum-pads'>
       {data.map(d => (
       <DrumPad 
-        id={d.id}
+        id = {d.id}
         letter = {d.letter}
         src = {d.src}
         handleDisplay = {this.handleDisplay}
         />
       ))}
       </div> 
-      <p id='attribution'>By Adam Wright</p>
+      <p id = 'attribution'>By Adam Wright</p>
       </div>
-      <a id='back-button' onClick={() => window.history.back()}>Back</a>
+      <a id = 'back-button' onClick={() => window.history.back()}>Back</a>
     </div>
   }
 }
 
-// create the button component
+// Create the button component
 
 class DrumPad extends React.Component {
   
-  // functions to connect keyboard to buttons
+  // Functions to connect keyboard to buttons
   
   componentDidMount() {
     document.addEventListener('keydown',this.handleKeyDown)
@@ -97,7 +97,7 @@ class DrumPad extends React.Component {
     }
   }
   
-  // button's clickhandler function
+  // Button's clickhandler function
   
   handleClick = () => {
     this.audio.play()
@@ -112,7 +112,7 @@ class DrumPad extends React.Component {
         id = {this.props.id}
         onClick = {this.handleClick}
       >
-        <h3 id='button-letter'>{this.props.letter}</h3>
+        <h3 id = 'button-letter'>{this.props.letter}</h3>
         <audio
           ref = {ref => this.audio = ref}
           className = 'clip'
