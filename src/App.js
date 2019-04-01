@@ -59,15 +59,15 @@ class App extends React.Component {
       <div id = 'display'>{this.state.display}</div>
       <div id ='drum-pads'>
       {data.map(d => (
-      <DrumPad 
-        id = {d.id}
-        letter = {d.letter}
-        src = {d.src}
-        handleDisplay = {this.handleDisplay}
+        <DrumPad 
+          id = {d.id}
+          letter = {d.letter}
+          src = {d.src}
+          handleDisplay = {this.handleDisplay}
         />
       ))}
       </div> 
-      <p id = 'attribution'>By Adam Wright</p>
+        <p id = 'attribution'>By Adam Wright</p>
       </div>
       <a id = 'back-button' onClick={() => window.history.back()}>Back</a>
     </div>
@@ -117,7 +117,8 @@ class DrumPad extends React.Component {
           ref = {ref => this.audio = ref}
           className = 'clip'
           src = {this.props.src}
-          id = {this.props.letter}>
+          id = {this.props.letter}
+        >
         </audio>
       </div>
     );
