@@ -142,7 +142,7 @@ a:hover {
 
 /* Media query for less than 900 px screen width */
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width: 900px) {
 
   #title {
     font-weight: 900;
