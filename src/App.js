@@ -26,15 +26,15 @@ import ride from './ride-sample.wav';
 // Object that defines each button's information
 
 const data = [
-  { id: 'Snare', letter: 'Q', src: snare },
-  { id: 'Bass Drum', letter: 'W', src: bass },
-  { id: 'Cymbal', letter: 'E', src: cymbal },
-  { id: 'Tom Hi', letter: 'A', src: tom1 },
-  { id: 'Tom Mid', letter: 'S', src: tom2 },
-  { id: 'Tom Low', letter: 'D', src: tom3 },
-  { id: 'High hat', letter: 'Z', src: closed },
-  { id: 'China', letter: 'X', src: clap },
-  { id: 'Ride', letter: 'C', src: ride },
+  { id: 'Snare', button: 'Shift',code: 16, src: snare },
+  { id: 'Bass Drum', button: 'Space',code: 32,   src: bass },
+  { id: 'High hat', button: 'Enter',code: 13, src: closed },
+  { id: 'Tom Hi', button: 'A',code: 65, src: tom1 },
+  { id: 'Tom Mid', button: 'S',code: 83, src: tom2 },
+  { id: 'Tom Low', button: 'D',code: 68, src: tom3 },
+  { id: 'China', button: 'J',code: 74, src: clap },
+  { id: 'Crash', button: 'K',code: 75, src: cymbal },
+  { id: 'Ride', button: 'L',code: 76, src: ride },
 ]
 
 // Create the drum machine component
@@ -44,7 +44,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: 'Hit Me!'
+      display: 'Hit Me !'
     }
   }
   
@@ -61,8 +61,9 @@ class App extends React.Component {
       {data.map(d => (
         <DrumPad 
           id = {d.id}
-          letter = {d.letter}
+          code = {d.code}
           src = {d.src}
+          button = {d.button}
           handleDisplay = {this.handleDisplay}
         />
       ))}
@@ -88,16 +89,18 @@ class DrumPad extends React.Component {
   componentWillUnmount() {
     document.removeEventListener('keydown',this.handleKeyDown)
   }
+
+  // Play sound on keyboard button press
   
   handleKeyDown = e => {
-    if(e.keyCode === this.props.letter.charCodeAt()) {
+    if(e.keyCode === this.props.code) {
       this.audio.play()
       this.audio.currentTime = 0
       this.props.handleDisplay(this.props.id)
     }
   }
   
-  // Button's clickhandler function
+  // Play sound on mouse click
   
   handleClick = () => {
     this.audio.play()
@@ -112,12 +115,12 @@ class DrumPad extends React.Component {
         id = {this.props.id}
         onClick = {this.handleClick}
       >
-        <h3 id = 'button-letter'>{this.props.letter}</h3>
+        <h3 id = 'button-letter'>{this.props.button}</h3>
         <audio
           ref = {ref => this.audio = ref}
           className = 'clip'
           src = {this.props.src}
-          id = {this.props.letter}
+          id = {this.props.button}
         >
         </audio>
       </div>
