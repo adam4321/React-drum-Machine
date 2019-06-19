@@ -4,7 +4,7 @@
 
 ## Desktop View
 
-![Desktop View](https://i.imgur.com/OMTqyYd.png)
+![Desktop View](https://i.imgur.com/YEJatsy.png)
 
 ## Mobile View
 
