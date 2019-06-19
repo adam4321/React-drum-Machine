@@ -8,5 +8,5 @@
 
 ## Mobile View
 
-![Mobile view](https://i.imgur.com/MFfmBiZ.png)
+![Mobile view](https://i.imgur.com/7ep6157.png)
 
