@@ -1,208 +1,216 @@
+/*************************************************************
+**  Main css file for application
+*************************************************************/
 
 body {
-  background-color: #445463;
-  font-family: 'Orbitron', sans-serif;
+    background-color: #445463;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Machine body */
 
 #title {
-  font-weight: 900;
-  font-size: 2.5vw;
+    font-weight: 900;
+    font-size: 2.5vw;
 }
 
 #drum-machine {
-  background-color: orange;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 6vw;
-  text-align: center;
-  width: 75vw;
-  height: 24vw;
-  border-radius: 2vw;
+    background-color: orange;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vw;
+    text-align: center;
+    width: 75vw;
+    height: 24vw;
+    border-radius: 2vw;
 }
 
-/* Machine display and text */
+/*************************************************************
+** Machine display and text 
+*************************************************************/
 
 #display {
-  border: solid 1vw black;
-  height: 1.9vw;
-  width: 14vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.3vw;
-  background-color: #282828;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  font-size: 1.5vw;
-  color: yellow;
-  text-shadow: -2px 2px 25px;
-  border: none;
-  position: relative;
+    border: solid 1vw black;
+    height: 1.9vw;
+    width: 14vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.3vw;
+    background-color: #282828;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    color: yellow;
+    text-shadow: -2px 2px 25px;
+    border: none;
+    position: relative;
 }
 
-/* Machine buttons and text */
+/**************************************************************
+** Machine buttons and text 
+**************************************************************/
 
 #drum-pads {
-  height: 13vw;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: .5vw;
-  grid-auto-rows: minmax(2.2vw, auto);
+    height: 13vw;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.5vw;
+    grid-auto-rows: minmax(2.2vw, auto);
 }
 
 #button-letter {
-  font-size: 1.3vw;
+    font-size: 1.3vw;
 }
 
 .drum-pad {
-  width: 22vw;
-  height: 3.7vw;
-  transition: 0.2s;
-  box-shadow: -2px 0px 8px rgb(167, 17, 208); 
-  border: none;
-  border-radius: 15px;
-  outline: none;
-  color: #FDFF38;
-  font-weight: bold;
-  text-shadow: -2px 2px 25px;
+    width: 22vw;
+    height: 3.7vw;
+    transition: 0.2s;
+    box-shadow: -2px 0px 8px rgb(167, 17, 208);
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    color: #fdff38;
+    font-weight: bold;
+    text-shadow: -2px 2px 25px;
 }
 
 /* My name */
 
 #attribution {
-  font-size: 1vw;
-  margin-top: 1.3vw;
-  position: absolute;
-  left: 33vw;
+    font-size: 1vw;
+    margin-top: 1.3vw;
+    position: absolute;
+    left: 33vw;
 }
- 
+
 #back-button {
-  width: 8vw;
-  height: 2.2vw;
-  background-color: #04536d;
-  position: absolute;
-  left: 46vw;
-  margin-top: 5.5vw;
-  border-radius: 11px;
-  border:none;
-  font-family: verdana;
-  padding-top: .1vw;
-  box-shadow: 1px 3.5px 3px 0px rgb(27, 26, 26);
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  color: gold;
-  font-size: 1.1vw;
-  -webkit-transition: 0.4s;
-  -moz-transition:  0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+    width: 8vw;
+    height: 2.2vw;
+    background-color: #04536d;
+    position: absolute;
+    left: 46vw;
+    margin-top: 5.5vw;
+    border-radius: 11px;
+    border: none;
+    font-family: verdana;
+    padding-top: 0.1vw;
+    box-shadow: 1px 3.5px 3px 0px rgb(27, 26, 26);
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    color: gold;
+    font-size: 1.1vw;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
 }
 
 #back-button:hover {
-  cursor: pointer;
-  color: rgba(154, 182, 196, 0.582);
-  opacity: 0.7;
-  -webkit-transition: 0.4s;
-  -moz-transition:  0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+    cursor: pointer;
+    color: rgba(154, 182, 196, 0.582);
+    opacity: 0.7;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
 }
 
 a {
-  text-decoration: none;
-  text-align: center;
-  display: inline-block;
-  color: gold;
-  font-size: 1.1vw;
-  -webkit-transition: 0.4s;
-  -moz-transition:  0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
-  text-decoration: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    color: gold;
+    font-size: 1.1vw;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    text-decoration: none;
 }
 
 a:hover {
-  cursor: pointer;
-  color: rgba(154, 182, 196, 0.582);
-  opacity: 0.7;
-  -webkit-transition: 0.4s;
-  -moz-transition:  0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s;
+    cursor: pointer;
+    color: rgba(154, 182, 196, 0.582);
+    opacity: 0.7;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
 }
 
-/* Media query for less than 900 px screen width */
+/***********************************************************
+** Media query for less than 900 px screen width 
+***********************************************************/
 
 @media only screen and (max-width: 900px) {
+    #title {
+        font-weight: 900;
+        font-size: 5vw;
+        padding-top: 2vw;
+    }
 
-  #title {
-    font-weight: 900;
-    font-size: 5vw;
-    padding-top: 2vw;
-  }
+    #drum-machine {
+        position: relative;
+        margin-top: 12vw;
+        width: 75vw;
+        height: 75vw;
+    }
 
-  #drum-machine {
-    position: relative;
-    margin-top: 12vw;
-    width: 75vw;
-    height: 75vw;
-  }
+    #display {
+        height: 6vw;
+        width: 34vw;
+        padding-top: 1vw;
+        margin-bottom: 1.3vw;
+        font-size: 4vw;
+    }
 
-  #display {
-    height: 6vw;
-    width: 34vw;
-    padding-top: 1vw;
-    margin-bottom: 1.3vw;
-    font-size: 4vw;
-  }
+    #drum-pads {
+        height: 50vw;
+        width: 90%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5vw;
+        grid-auto-rows: minmax(2.2vw, auto);
+    }
 
-  #drum-pads {
-    height: 50vw;
-    width: 90%;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: .5vw;
-    grid-auto-rows: minmax(2.2vw, auto);
-  }
-      
-  #button-letter {
-    font-size: 3vw;
-  }
-      
-  .drum-pad {
-    width: 22vw;
-    height: 10vw;
-    margin-top: 2vw;
-    transition: 0.2s;
-    box-shadow: -2px 0px 8px rgb(167, 17, 208); 
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    font-weight: bold;
-    text-shadow: -2px 2px 25px;
-  }
+    #button-letter {
+        font-size: 3vw;
+    }
 
-  #attribution {
-    font-size: 3vw;
-    margin-top: -.1vw;
-    left: 23vw;
-  }
-        
-  #back-button {
-    width: 30vw;
-    height: 8vw;
-    left: 35vw;
-    margin-top: 15vw;
-    border-radius: 11px;
-    font-size: 5vw;
-    padding-top: 2vw;
-  }
+    .drum-pad {
+        width: 22vw;
+        height: 10vw;
+        margin-top: 2vw;
+        transition: 0.2s;
+        box-shadow: -2px 0px 8px rgb(167, 17, 208);
+        border: none;
+        border-radius: 8px;
+        outline: none;
+        font-weight: bold;
+        text-shadow: -2px 2px 25px;
+    }
+
+    #attribution {
+        font-size: 3vw;
+        margin-top: -0.1vw;
+        left: 23vw;
+    }
+
+    #back-button {
+        width: 30vw;
+        height: 8vw;
+        left: 35vw;
+        margin-top: 15vw;
+        border-radius: 11px;
+        font-size: 5vw;
+        padding-top: 2vw;
+    }
 }

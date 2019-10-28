@@ -1,30 +1,35 @@
+/***********************************************************************
+**  Author:       Adam Wright
+**  Description:  Drum machine built with JavaScript and React
+***********************************************************************/
 
 // @ts-check
 
 import React from 'react';
 import './App.css';
+import DrumPad from './DrumPad.js';
+
 // @ts-ignore
-import snare from './snare-sample.wav';
+import snare from './sound_samples/snare-sample.wav';
 // @ts-ignore
-import bass from './kick-sample.wav';
+import bass from './sound_samples/kick-sample.wav';
 // @ts-ignore
-import cymbal from './crash-sample.wav';
+import cymbal from './sound_samples/crash-sample.wav';
 // @ts-ignore
-import tom1 from './hi-tom-sample.wav';
+import tom1 from './sound_samples/hi-tom-sample.wav';
 // @ts-ignore
-import tom2 from './mid-tom-sample.wav';
+import tom2 from './sound_samples/mid-tom-sample.wav';
 // @ts-ignore
-import tom3 from './low-tom-sample.wav';
+import tom3 from './sound_samples/low-tom-sample.wav';
 // @ts-ignore
-import closed from './hh-sample.wav';
+import closed from './sound_samples/hh-sample.wav';
 // @ts-ignore
-import clap from './china-sample.wav';
+import clap from './sound_samples/china-sample.wav';
 // @ts-ignore
-import ride from './ride-sample.wav';
+import ride from './sound_samples/ride-sample.wav';
 
 
 // Object that defines each button's information
-
 const data = [
   { id: 'Snare', button: 'Shift',code: 16, src: snare },
   { id: 'Bass Drum', button: 'Space',code: 32,   src: bass },
@@ -37,111 +42,44 @@ const data = [
   { id: 'Ride', button: '\\',code: 220, src: ride },
 ]
 
-// Create the drum machine component
+/***************************************************************
+** Drum machine component
+***************************************************************/
 
 class App extends React.Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      display: 'Hit Me !'
-    }
-  }
-  
-  // Display Handler
-  
-  handleDisplay = display => this.setState( {display} )
-  
-  render() {
-    return <div>
-      <div id = 'drum-machine'>
-      <h1 id = 'title'>React Drum Machine</h1>
-      <div id = 'display'>{this.state.display}</div>
-      <div id ='drum-pads'>
-      {data.map(d => (
-        <DrumPad 
-          id = {d.id}
-          code = {d.code}
-          src = {d.src}
-          button = {d.button}
-          handleDisplay = {this.handleDisplay}
-        />
-      ))}
-      </div> 
-        <p id = 'attribution'>By Adam Wright</p>
-      </div>
-      <button id = 'back-button' onClick={() => window.history.back()}>Back</button>
-    </div>
-  }
-}
-
-// Create the button component
-
-class DrumPad extends React.Component {
-  // Functions to connect keyboard to buttons
-
-  componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyDown);
-    window.focus();
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyDown);
-  }
-
-  // Create overlapping samples
-
-  Channel = audio_uri => {
-    this.sample = new Audio(audio_uri);
-    this.sample.play();
-  };
-
-  Switcher = (audio_uri, num) => {
-    this.channels = [];
-    this.num = num;
-    this.index = 0;
-
-    for (let i = 0; i < num; i++) {
-      this.channels.push(new this.Channel(audio_uri));
+    constructor(props) {
+        super(props);
+        this.state = {
+            display: 'Hit Me !'
+        };
     }
 
-    this.Switcher.prototype.play = function() {
-      this.channels[this.index++].play();
-      this.index = this.index < this.num ? this.index : 0;
-    };
-  };
+    // Display Handler
+    handleDisplay = display => this.setState({display});
 
-  // Play sound on keyboard button press
-
-  handleKeyDown = e => {
-    if (e.keyCode === this.props.code) {
-      this.Switcher(this.props.src, 1);
-      this.audio.currentTime = 0;
-      this.props.handleDisplay(this.props.id);
+    render() {
+        return (
+            <div>
+                <div id="drum-machine">
+                    <h1 id="title">React Drum Machine</h1>
+                    <div id="display"> {this.state.display} </div>
+                    <div id="drum-pads">
+                        {data.map(d => (
+                            <DrumPad
+                                id={d.id}
+                                code={d.code}
+                                src={d.src}
+                                button={d.button}
+                                handleDisplay={this.handleDisplay}
+                            />
+                        ))}
+                    </div>
+                    <p id="attribution">By Adam Wright</p>
+                </div>
+                <button id="back-button" onClick={() => window.history.back()}> Back </button>
+            </div>
+        );
     }
-  };
-
-  // Play sound on mouse click
-
-  handleClick = () => {
-    this.Switcher(this.props.src, 1);
-    this.audio.currentTime = 0;
-    this.props.handleDisplay(this.props.id);
-  };
-
-  render() {
-    return (
-      <div className="drum-pad" id={this.props.id} onClick={this.handleClick}>
-        <h3 id="button-letter">{this.props.button}</h3>
-        <audio
-          ref={ref => (this.audio = ref)}
-          className="clip"
-          src={this.props.src}
-          id={this.props.button}
-        />
-      </div>
-    );
-  }
 }
 
 export default App;
