@@ -29,7 +29,7 @@ import clap from './sound_samples/china-sample.wav';
 import ride from './sound_samples/ride-sample.wav';
 
 
-// Object that defines each button's information
+/* Object that defines each button's properties ---------------------------- */
 const data = [
   { id: 'Snare', button: 'Shift',code: 16, src: snare },
   { id: 'Bass Drum', button: 'Space',code: 32,   src: bass },
@@ -42,9 +42,8 @@ const data = [
   { id: 'Ride', button: '\\',code: 220, src: ride },
 ]
 
-/***************************************************************
-** Drum machine component
-***************************************************************/
+ 
+/* Drum machine component -------------------------------------------------- */
 
 class App extends React.Component {
     constructor(props) {
@@ -54,7 +53,6 @@ class App extends React.Component {
         };
     }
 
-    // Display Handler
     handleDisplay = display => this.setState({display});
 
     render() {

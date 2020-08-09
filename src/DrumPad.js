@@ -16,7 +16,7 @@ class DrumPad extends React.Component {
         document.removeEventListener('keydown', this.handleKeyDown);
     }
 
-    // Create overlapping samples
+    /* Create overlapping samples ------------------------------------------ */
     Channel = audio_uri => {
         this.sample = new Audio(audio_uri);
         this.sample.play();
@@ -37,7 +37,7 @@ class DrumPad extends React.Component {
         };
     };
 
-    // Play sound on keyboard button press
+    /* Play sound on keyboard button press --------------------------------- */
     handleKeyDown = e => {
         if (e.keyCode === this.props.code) {
             this.Switcher(this.props.src, 1);
@@ -46,7 +46,7 @@ class DrumPad extends React.Component {
         }
     };
 
-    // Play sound on mouse click
+    /* Play sound on mouse click ------------------------------------------- */
     handleClick = () => {
         this.Switcher(this.props.src, 1);
         this.audio.currentTime = 0;
