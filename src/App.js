@@ -9,37 +9,40 @@ import React from 'react';
 import './App.css';
 import DrumPad from './DrumPad.js';
 
+
+/* Import sound samples ---------------------------------------------------- */
+
 // @ts-ignore
-import snare from './sound_samples/snare-sample.wav';
+import snare from './mp3_samples/snare-sample.mp3';
 // @ts-ignore
-import bass from './sound_samples/kick-sample.wav';
+import bass from './mp3_samples/kick-sample.mp3';
 // @ts-ignore
-import cymbal from './sound_samples/crash-sample.wav';
+import cymbal from './mp3_samples/crash-sample.mp3';
 // @ts-ignore
-import tom1 from './sound_samples/hi-tom-sample.wav';
+import tom1 from './mp3_samples/hi-tom-sample.mp3';
 // @ts-ignore
-import tom2 from './sound_samples/mid-tom-sample.wav';
+import tom2 from './mp3_samples/mid-tom-sample.mp3';
 // @ts-ignore
-import tom3 from './sound_samples/low-tom-sample.wav';
+import tom3 from './mp3_samples/low-tom-sample.mp3';
 // @ts-ignore
-import closed from './sound_samples/hh-sample.wav';
+import closed from './mp3_samples/hh-sample.mp3';
 // @ts-ignore
-import clap from './sound_samples/china-sample.wav';
+import clap from './mp3_samples/china-sample.mp3';
 // @ts-ignore
-import ride from './sound_samples/ride-sample.wav';
+import ride from './mp3_samples/ride-sample.mp3';
 
 
 /* Object that defines each button's properties ---------------------------- */
 const data = [
-  { id: 'Snare', button: 'Shift',code: 16, src: snare },
-  { id: 'Bass Drum', button: 'Space',code: 32,   src: bass },
-  { id: 'High hat', button: 'Enter',code: 13, src: closed },
-  { id: 'Tom Hi', button: 'A',code: 65, src: tom1 },
-  { id: 'Tom Mid', button: 'S',code: 83, src: tom2 },
-  { id: 'Tom Low', button: 'D',code: 68, src: tom3 },
-  { id: 'Crash', button: 'Q',code: 81, src: cymbal },
-  { id: 'China', button: 'W',code: 87, src: clap },
-  { id: 'Ride', button: '\\',code: 220, src: ride },
+  { id: 'Snare', button: 'Shift', code: 16, src: snare },
+  { id: 'Bass Drum', button: 'Space', code: 32, src: bass },
+  { id: 'High hat', button: 'Enter', code: 13, src: closed },
+  { id: 'Tom Hi', button: 'A', code: 65, src: tom1 },
+  { id: 'Tom Mid', button: 'S', code: 83, src: tom2 },
+  { id: 'Tom Low', button: 'D', code: 68, src: tom3 },
+  { id: 'Crash', button: 'Q', code: 81, src: cymbal },
+  { id: 'China', button: 'W', code: 87, src: clap },
+  { id: 'Ride', button: '\\', code: 220, src: ride },
 ]
 
  
