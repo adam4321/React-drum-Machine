@@ -56,16 +56,16 @@ class DrumPad extends React.Component {
     render() {
         return (
             <div
-                className = "drum-pad"
-                id = {this.props.id}
-                onClick = {this.handleClick}
+                className="drum-pad"
+                id={this.props.id}
+                onClick={this.handleClick}
             >
-                <h3 id = "button-letter">{this.props.button}</h3>
+                <h3 id="button-letter">{this.props.button}</h3>
                 <audio
-                    ref = {ref => (this.audio = ref)}
-                    className = "clip"
-                    src = {this.props.src}
-                    id = {this.props.button}
+                    ref={ref => (this.audio = ref)}
+                    className="clip"
+                    src={this.props.src}
+                    id={this.props.button}
                 />
             </div>
         );
