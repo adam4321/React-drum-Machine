@@ -69,6 +69,7 @@ class App extends React.Component {
                 >
                     <div>Open GitHub repo in a new tab</div>
                 </a>
+                
                 <div id="drum-machine">
                     <h1 id="title">React Drum Machine</h1>
                     <div id="display"> {this.state.display} </div>
@@ -85,6 +86,7 @@ class App extends React.Component {
                     </div>
                     <p id="attribution">By Adam Wright</p>
                 </div>
+                
                 <button id="back-button" onClick={() => window.history.back()}> Back </button>
             </div>
         );
