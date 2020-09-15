@@ -61,14 +61,16 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <a 
-                    id="gh-link" 
-                    href="https://github.com/adam4321/React-drum-Machine" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                >
-                    <div>Open GitHub repo in a new tab</div>
-                </a>
+                <div id="gh-bar">
+                    <a 
+                        id="gh-link" 
+                        href="https://github.com/adam4321/React-drum-Machine" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                    >
+                        <div>Open GitHub repo in a new tab</div>
+                    </a>
+                </div>
                 
                 <div id="drum-machine">
                     <h1 id="title">React Drum Machine</h1>
