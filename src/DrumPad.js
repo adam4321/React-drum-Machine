@@ -2,76 +2,76 @@
 **  DrumPad button component
 ****************************************************************/
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import './App.css';
 
-class DrumPad extends React.Component {
+function DrumPad(props) {
 
-    componentDidMount() {
-        document.addEventListener('keydown', this.handleKeyDown);
+    const audioRef = useRef(null);
+
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyDown);
         window.focus();
-    }
 
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.handleKeyDown);
-    }
+        return function cleanup() {
+            document.removeEventListener('keydown', handleKeyDown);
+        };
+    });
 
     /* Create overlapping samples ------------------------------------------ */
-    Channel = (audio_uri) => {
-        this.sample = new Audio(audio_uri);
-        this.sample.play();
+    const Channel = (audio_uri) => {
+        let sample = new Audio(audio_uri);
+        sample.play();
     };
 
-    Switcher = (audio_uri, num) => {
-        this.channels = [];
-        this.num = num;
-        this.index = 0;
+    const Switcher = (audio_uri, num) => {
+        let channels = [];
+        let index = 0;
 
         for (let i = 0; i < num; i++) {
-            this.channels.push(this.Channel(audio_uri));
+            channels.push(Channel(audio_uri));
         }
 
-        this.Switcher.play = () => {
-            this.channels[this.index++].play();
-            this.index = this.index < this.num ? this.index : 0;
+        Switcher.play = () => {
+            channels[index++].play();
+            index = index < num ? index : 0;
         };
     };
 
     /* Play sound on keyboard button press --------------------------------- */
-    handleKeyDown = (e) => {
-        if (e.keyCode === this.props.code) {
-            this.Switcher(this.props.src, 1);
-            this.audio.currentTime = 0;
-            this.props.handleDisplay(this.props.id);
+    function handleKeyDown(e) {
+        if (e.keyCode === props.code) {
+            Switcher(props.src, 1);
+            audioRef.current.currentTime = 0;
+            props.handleDisplay(props.id);
         }
     };
 
     /* Play sound on mouse click ------------------------------------------- */
-    handleClick = (e) => {
-        this.Switcher(this.props.src, 1);
-        this.audio.currentTime = 0;
-        this.props.handleDisplay(this.props.id);
+    function handleClick() {
+        Switcher(props.src, 1);
+        audioRef.current.currentTime = 0;
+        props.handleDisplay(props.id);
     };
 
-    render() {
-        return (
-            <div
-                className="drum-pad"
-                id={this.props.id}
-                onClick={this.handleClick}
-            >
-                <h3 id="button-letter">{this.props.button}</h3>
-                
-                <audio
-                    ref={ref => (this.audio = ref)}
-                    className="clip"
-                    src={this.props.src}
-                    id={this.props.button}
-                    type="audio/wav"
-                />
-            </div>
-        );
-    }
+    return (
+        <div
+            className="drum-pad"
+            id={props.id}
+            onClick={handleClick}
+        >
+            <h3 id="button-letter">{props.button}</h3>
+            
+            <audio
+                ref={audioRef}
+                className="clip"
+                src={props.src}
+                id={props.button}
+                type="audio/wav"
+            />
+        </div>
+    );
+    
 }
 
 export default DrumPad;

@@ -3,7 +3,7 @@
 **  Description:  Drum machine built with JavaScript and React
 ***********************************************************************/
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import DrumPad from './DrumPad.js';
 
@@ -46,7 +46,7 @@ function App() {
         setDisplay(id);
     }
 
-    return(
+    return (
         <>
             <div id="gh-bar">
                 <a 
