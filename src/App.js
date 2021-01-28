@@ -3,8 +3,6 @@
 **  Description:  Drum machine built with JavaScript and React
 ***********************************************************************/
 
-// @ts-check
-
 import React from 'react';
 import './App.css';
 import DrumPad from './DrumPad.js';
@@ -12,37 +10,30 @@ import DrumPad from './DrumPad.js';
 
 /* Import sound samples ---------------------------------------------------- */
 
-// @ts-ignore
-import snare from './mp3_samples/snare-sample.mp3';
-// @ts-ignore
-import bass from './mp3_samples/kick-sample.mp3';
-// @ts-ignore
-import cymbal from './mp3_samples/crash-sample.mp3';
-// @ts-ignore
-import tom1 from './mp3_samples/hi-tom-sample.mp3';
-// @ts-ignore
-import tom2 from './mp3_samples/mid-tom-sample.mp3';
-// @ts-ignore
-import tom3 from './mp3_samples/low-tom-sample.mp3';
-// @ts-ignore
-import closed from './mp3_samples/hh-sample.mp3';
-// @ts-ignore
-import clap from './mp3_samples/china-sample.mp3';
-// @ts-ignore
-import ride from './mp3_samples/ride-sample.mp3';
+import snare from './wav/snare-sample.wav';
+import bass from './wav/kick-sample.wav';
+import cymbal from './wav/crash-sample.wav';
+import tom1 from './wav/hi-tom-sample.wav';
+import tom2 from './wav/mid-tom-sample.wav';
+import tom3 from './wav/low-tom-sample.wav';
+import closed from './wav/hh-sample.wav';
+import china from './wav/china-sample.wav';
+import ride from './wav/ride-sample.wav';
 
+
+// @ts-check
 
 /* Object that defines each button's properties ---------------------------- */
-const data = [
-  { id: 'Snare', button: 'Shift', code: 16, src: snare },
-  { id: 'Bass Drum', button: 'Space', code: 32, src: bass },
-  { id: 'High hat', button: 'Enter', code: 13, src: closed },
-  { id: 'Tom Hi', button: 'A', code: 65, src: tom1 },
-  { id: 'Tom Mid', button: 'S', code: 83, src: tom2 },
-  { id: 'Tom Low', button: 'D', code: 68, src: tom3 },
-  { id: 'Crash', button: 'Q', code: 81, src: cymbal },
-  { id: 'China', button: 'W', code: 87, src: clap },
-  { id: 'Ride', button: '\\', code: 220, src: ride },
+const buttons = [
+  { id: 'Snare',     label: 'Shift', code: 16, src: snare },
+  { id: 'Bass Drum', label: 'Space', code: 32, src: bass },
+  { id: 'High hat',  label: 'Enter', code: 13, src: closed },
+  { id: 'Tom Hi',    label: 'A',     code: 65, src: tom1 },
+  { id: 'Tom Mid',   label: 'S',     code: 83, src: tom2 },
+  { id: 'Tom Low',   label: 'D',     code: 68, src: tom3 },
+  { id: 'Crash',     label: 'Q',     code: 81, src: cymbal },
+  { id: 'China',     label: 'W',     code: 87, src: china },
+  { id: 'Ride',      label: '\\',    code: 220, src: ride },
 ]
 
  
@@ -59,8 +50,8 @@ class App extends React.Component {
     handleDisplay = display => this.setState({display});
 
     render() {
-        return (
-            <div>
+        return(
+            <>
                 <div id="gh-bar">
                     <a 
                         id="gh-link" 
@@ -74,23 +65,27 @@ class App extends React.Component {
                 
                 <div id="drum-machine">
                     <h1 id="title">React Drum Machine</h1>
+
                     <div id="display"> {this.state.display} </div>
+
                     <div id="drum-pads">
-                        {data.map(d => (
+                        {buttons.map(b => (
                             <DrumPad
-                                id={d.id}
-                                code={d.code}
-                                src={d.src}
-                                button={d.button}
+                                key={b.id}
+                                id={b.id}
+                                code={b.code}
+                                src={b.src}
+                                button={b.label}
                                 handleDisplay={this.handleDisplay}
                             />
                         ))}
                     </div>
+                    
                     <p id="attribution">By Adam Wright</p>
                 </div>
                 
                 <button id="back-button" onClick={() => window.history.back()}> Back </button>
-            </div>
+            </>
         );
     }
 }

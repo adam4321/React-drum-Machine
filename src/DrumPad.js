@@ -6,7 +6,7 @@ import React from 'react';
 import './App.css';
 
 class DrumPad extends React.Component {
-    
+
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown);
         window.focus();
@@ -17,7 +17,7 @@ class DrumPad extends React.Component {
     }
 
     /* Create overlapping samples ------------------------------------------ */
-    Channel = audio_uri => {
+    Channel = (audio_uri) => {
         this.sample = new Audio(audio_uri);
         this.sample.play();
     };
@@ -28,10 +28,10 @@ class DrumPad extends React.Component {
         this.index = 0;
 
         for (let i = 0; i < num; i++) {
-            this.channels.push(new this.Channel(audio_uri));
+            this.channels.push(this.Channel(audio_uri));
         }
 
-        this.Switcher.prototype.play = function() {
+        this.Switcher.play = () => {
             this.channels[this.index++].play();
             this.index = this.index < this.num ? this.index : 0;
         };
@@ -61,11 +61,13 @@ class DrumPad extends React.Component {
                 onClick={this.handleClick}
             >
                 <h3 id="button-letter">{this.props.button}</h3>
+                
                 <audio
                     ref={ref => (this.audio = ref)}
                     className="clip"
                     src={this.props.src}
                     id={this.props.button}
+                    type="audio/wav"
                 />
             </div>
         );
