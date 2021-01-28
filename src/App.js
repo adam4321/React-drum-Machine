@@ -3,7 +3,7 @@
 **  Description:  Drum machine built with JavaScript and React
 ***********************************************************************/
 
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import DrumPad from './DrumPad.js';
 
@@ -39,55 +39,51 @@ const buttons = [
  
 /* Drum machine component -------------------------------------------------- */
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            display: 'Hit Me !'
-        };
+function App() {
+    const [display, setDisplay] = useState('Hit Me!')
+
+    const handleDisplay = (id) => {
+        setDisplay(id);
     }
 
-    handleDisplay = display => this.setState({display});
+    return(
+        <>
+            <div id="gh-bar">
+                <a 
+                    id="gh-link" 
+                    href="https://github.com/adam4321/React-drum-Machine" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    <div>Open GitHub repo in a new tab</div>
+                </a>
+            </div>
+            
+            <div id="drum-machine">
+                <h1 id="title">React Drum Machine</h1>
 
-    render() {
-        return(
-            <>
-                <div id="gh-bar">
-                    <a 
-                        id="gh-link" 
-                        href="https://github.com/adam4321/React-drum-Machine" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                    >
-                        <div>Open GitHub repo in a new tab</div>
-                    </a>
+                <div id="display"> {display} </div>
+
+                <div id="drum-pads">
+                    {buttons.map(b => (
+                        <DrumPad
+                            key={b.id}
+                            id={b.id}
+                            code={b.code}
+                            src={b.src}
+                            button={b.label}
+                            handleDisplay={handleDisplay}
+                            value={display}
+                        />
+                    ))}
                 </div>
                 
-                <div id="drum-machine">
-                    <h1 id="title">React Drum Machine</h1>
-
-                    <div id="display"> {this.state.display} </div>
-
-                    <div id="drum-pads">
-                        {buttons.map(b => (
-                            <DrumPad
-                                key={b.id}
-                                id={b.id}
-                                code={b.code}
-                                src={b.src}
-                                button={b.label}
-                                handleDisplay={this.handleDisplay}
-                            />
-                        ))}
-                    </div>
-                    
-                    <p id="attribution">By Adam Wright</p>
-                </div>
-                
-                <button id="back-button" onClick={() => window.history.back()}> Back </button>
-            </>
-        );
-    }
+                <p id="attribution">By Adam Wright</p>
+            </div>
+            
+            <button id="back-button" onClick={() => window.history.back()}> Back </button>
+        </>
+    );
 }
 
 export default App;

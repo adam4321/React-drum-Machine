@@ -38,7 +38,7 @@ class DrumPad extends React.Component {
     };
 
     /* Play sound on keyboard button press --------------------------------- */
-    handleKeyDown = e => {
+    handleKeyDown = (e) => {
         if (e.keyCode === this.props.code) {
             this.Switcher(this.props.src, 1);
             this.audio.currentTime = 0;
@@ -47,7 +47,7 @@ class DrumPad extends React.Component {
     };
 
     /* Play sound on mouse click ------------------------------------------- */
-    handleClick = () => {
+    handleClick = (e) => {
         this.Switcher(this.props.src, 1);
         this.audio.currentTime = 0;
         this.props.handleDisplay(this.props.id);
