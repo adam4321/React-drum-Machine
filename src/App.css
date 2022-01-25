@@ -29,6 +29,7 @@ body {
 #title {
     font-weight: 900;
     font-size: 2.5vw;
+    padding-top: 10px;
 }
 
 #drum-machine {
@@ -53,7 +54,7 @@ body {
     width: 14vw;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 1.3vw;
+    margin-bottom: 1.4vw;
     background-color: #282828;
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
@@ -96,16 +97,6 @@ body {
     color: #fdff38;
     font-weight: bold;
     text-shadow: -2px 2px 25px;
-}
-
-
-/* My name ----------------------------------------------------------------- */
-
-#attribution {
-    font-size: 1vw;
-    margin-top: 1.3vw;
-    position: absolute;
-    left: 33vw;
 }
 
 #back-button {
@@ -218,12 +209,6 @@ a:hover {
         outline: none;
         font-weight: bold;
         text-shadow: -2px 2px 25px;
-    }
-
-    #attribution {
-        font-size: 3vw;
-        margin-top: -0.1vw;
-        left: 23vw;
     }
 
     #back-button {

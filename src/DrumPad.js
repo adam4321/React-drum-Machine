@@ -68,6 +68,7 @@ function DrumPad(props) {
                 src={props.src}
                 id={props.button}
                 type="audio/wav"
+                preload='auto'
             />
         </div>
     );

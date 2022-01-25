@@ -77,8 +77,6 @@ function App() {
                         />
                     ))}
                 </div>
-                
-                <p id="attribution">By Adam Wright</p>
             </div>
             
             <button id="back-button" onClick={() => window.history.back()}> Back </button>
